@@ -1,0 +1,126 @@
+:root {
+  --neon-blue: #00E5FF;
+  --neon-pink: #FF1493;
+  --neon-yellow: #FFD700;
+  --neon-green: #39FF14;
+  --neon-orange: #FFA500;
+}
+
+.nft-container {
+  background: linear-gradient(to bottom, #1a1a1a, #000000);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.nft-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--neon-blue);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 20px var(--neon-blue);
+  backdrop-filter: blur(10px);
+}
+
+.nft-title {
+  color: var(--neon-blue);
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--neon-blue);
+  margin-bottom: 1.5rem;
+}
+
+.nft-button {
+  background: var(--neon-blue);
+  color: black;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nft-button:hover {
+  background: var(--neon-pink);
+  box-shadow: 0 0 15px var(--neon-pink);
+  transform: translateY(-2px);
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.quantity-button {
+  background: transparent;
+  border: 2px solid var(--neon-blue);
+  color: var(--neon-blue);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quantity-button:hover {
+  background: var(--neon-blue);
+  color: black;
+}
+
+.rainbow-text {
+  background: linear-gradient(
+    45deg,
+    var(--neon-blue),
+    var(--neon-pink),
+    var(--neon-yellow),
+    var(--neon-green),
+    var(--neon-orange)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 5s ease infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--neon-blue);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  color: var(--neon-blue);
+  font-weight: bold;
+}
+
+.stat-label {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+} 
